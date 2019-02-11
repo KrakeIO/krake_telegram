@@ -1,0 +1,39 @@
+{
+  "content_scripts": [ {
+      "matches"   : [ "<all_urls>" ],      
+      "css": [ ], 
+      "js": [ 
+        "js/jquery_1.9.1.min.js",
+        "js/harvesting_script.js"
+      ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+  } ],  
+  "background": {
+      "scripts": [ 
+        "js/background.js"
+      ]
+  },
+  "browser_action": {},
+  "web_accessible_resources": [
+    "js/content/templates/sidebar.hbs",
+    "js/content/templates/column.hbs",
+    "html/panel.html",
+    "css/font-awesome-4.2.0/fonts/fontawesome-webfont.eot",
+    "css/font-awesome-4.2.0/fonts/fontawesome-webfont.svg",
+    "css/font-awesome-4.2.0/fonts/fontawesome-webfont.ttf",
+    "css/font-awesome-4.2.0/fonts/fontawesome-webfont.woff",
+    "css/font-awesome-4.2.0/fonts/FontAwesome.otf"    
+  ],
+   "icons": {},
+   "manifest_version": 2,
+   "name": "Telegram Scraper - GetData.IO",
+   "description": "scrape structured data with GetData.IO",   
+   "permissions": [ "contextMenus", 
+                    "tabs", 
+                    "http://*/*", 
+                    "https://*/*",
+                    "cookies"],
+   "content_security_policy": "script-src 'self' https://cdn.mxpnl.com; object-src 'self'",
+   "version": "0.0.1"
+}
