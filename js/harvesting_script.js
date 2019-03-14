@@ -69,17 +69,10 @@ var publishFetchedRecords = function() {
 
 }
 
-$(document).ready(function() {
-  if(window.location.href.match("telegram")) {
-    console.log("detected telegram website");
-    setTimeout(function() {
-      setRecipe();
-      processBatch();    
-    }, 10000);
-
-    setTimeout(function() {
-      location.reload();
-    }, 3600000);
-  }
-
-})
+if(window.location.href.match("telegram")) {
+  console.log("detected telegram website");
+  setTimeout(function() {
+    setRecipe();
+    processBatch();    
+  }, 10000);
+}
