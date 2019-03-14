@@ -27,7 +27,7 @@
   ],
    "icons": {},
    "manifest_version": 2,
-   "name": "Telegram Scraper - GetData.IO",
+   "name": "Telegram Crypto Currency News Scraper - GetData.IO",
    "description": "scrape structured data with GetData.IO",   
    "permissions": [ "contextMenus", 
                     "tabs", 

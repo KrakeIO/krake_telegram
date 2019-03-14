@@ -52,6 +52,8 @@ var publishFetchedRecords = function() {
   Object.keys(recordsHash).forEach(function(key, index) {
     console.log("\t\tpublishing record #" + index);
     record = recordsHash[key];
+    record["postedAt"] = fetchMostRecentDate();
+    
     console.log(record);
     $.ajax({
       async: false, 
@@ -67,6 +69,10 @@ var publishFetchedRecords = function() {
   deferred.resolve();
   return deferred.promise();
 
+}
+
+var fetchMostRecentDate = function() {
+  return $($(".im_message_date_split_text")[$(".im_message_date_split_text").length - 1]).html();
 }
 
 if(window.location.href.match("telegram")) {
